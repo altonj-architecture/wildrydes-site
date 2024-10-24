@@ -23,10 +23,13 @@ const ddb = DynamoDBDocumentClient.from(client);
 
 const fleet = [
     { Name: 'Angel', Color: 'White', Gender: 'Female' },
+    { Name: 'ButterCup', Color: 'Brown', Gender: 'Female' },
+    { Name: 'Sunny', Color: 'Orange', Gender: 'Male' },
+    { Name: 'Bubbles', Color: 'Light Blue', Gender: 'Female' },
     { Name: 'Gil', Color: 'White', Gender: 'Male' },
+    { Name: 'Seymour', Color: 'Black', Gender: 'Male' },
     { Name: 'Rocinante', Color: 'Yellow', Gender: 'Female' },
 ];
-
 export const handler = async (event, context) => {
     if (!event.requestContext.authorizer) {
         return errorResponse('Authorization not configured', context.awsRequestId);
